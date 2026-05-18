@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing — ComuniCAP® · PictoCrisis® · ComuniPro® | Adriana Soba</title>
+<style>
+:root {
+  --bg: #0a0f1e;
+  --surface: #111827;
+  --surface2: #1a2235;
+  --accent: #3a86ff;
+  --accent2: #06d6a0;
+  --red: #ef4444;
+  --purple: #a78bfa;
+  --text: #f1f5f9;
+  --text2: #94a3b8;
+  --border: rgba(255,255,255,0.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; padding: 20px; }
+h1 { font-size: 1.8rem; font-weight: 900; letter-spacing: 2px; margin-bottom: 8px; }
+h2 { font-size: 1.1rem; font-weight: 900; letter-spacing: 1px; color: var(--accent2); margin: 24px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+h3 { font-size: 0.9rem; font-weight: 700; color: var(--accent); margin: 16px 0 8px; }
+.subtitle { color: var(--text2); font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 32px; }
+.section { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 20px; }
+.tag { display: inline-block; padding: 3px 10px; border-radius: 50px; font-size: 0.65rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 8px; }
+.tag-cap { background: rgba(58,134,255,.15); color: #60a5fa; }
+.tag-picto { background: rgba(239,68,68,.15); color: #f87171; }
+.tag-pro { background: rgba(167,139,250,.15); color: #c4b5fd; }
+.price-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 12px 0; }
+.price-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; }
+.price-num { font-size: 1.4rem; font-weight: 900; color: var(--accent2); }
+.price-label { font-size: 0.65rem; color: var(--text2); letter-spacing: 1px; margin-top: 4px; }
+.card { background: var(--surface2); border-left: 3px solid var(--accent); border-radius: 8px; padding: 16px; margin: 12px 0; white-space: pre-wrap; font-size: 0.85rem; line-height: 1.7; }
+.card.red { border-left-color: var(--red); }
+.card.purple { border-left-color: var(--purple); }
+.card.green { border-left-color: var(--accent2); }
+.copy-btn { background: rgba(58,134,255,.15); border: 1px solid rgba(58,134,255,.3); color: var(--accent); padding: 6px 14px; border-radius: 6px; font-size: 0.72rem; cursor: pointer; margin-top: 8px; }
+.copy-btn:hover { background: rgba(58,134,255,.3); }
+.dest-list { display: flex; flex-direction: column; gap: 8px; }
+.dest-item { background: var(--surface2); border-radius: 8px; padding: 12px 16px; font-size: 0.82rem; }
+.dest-item strong { color: var(--accent2); }
+.insta-post { background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 12px 0; }
+.insta-header { font-size: 0.7rem; color: var(--text2); letter-spacing: 1px; margin-bottom: 10px; }
+.insta-text { font-size: 0.88rem; line-height: 1.8; white-space: pre-wrap; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+th { text-align: left; font-size: 0.65rem; letter-spacing: 1px; color: var(--text2); padding: 8px 12px; border-bottom: 1px solid var(--border); }
+td { font-size: 0.82rem; padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,.04); }
+td strong { color: var(--accent2); }
+.nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.nav a { background: var(--surface2); border: 1px solid var(--border); color: var(--text2); padding: 7px 14px; border-radius: 8px; font-size: 0.75rem; text-decoration: none; }
+.nav a:hover { border-color: var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+
+<h1>📦 KIT DE VENTAS COMPLETO</h1>
+<div class="subtitle">ComuniCAP® · PictoCrisis® · ComuniPro® — © Adriana Soba · Fonoaudióloga · Uruguay</div>
+
+<div class="nav">
+  <a href="#precios">💰 Precios</a>
+  <a href="#estrategia">🎯 Estrategia</a>
+  <a href="#cartas">📄 Cartas</a>
+  <a href="#instagram">📱 Instagram</a>
+  <a href="#destinos">📍 A quién enviar</a>
+  <a href="#prueba">🎁 Prueba gratuita</a>
+</div>
+
+<!-- PRECIOS -->
+<div class="section" id="precios">
+  <h2>💰 ESTRUCTURA DE PRECIOS</h2>
+
+  <h3>🧩 ComuniCAP® — Comunicación Aumentativa</h3>
+  <span class="tag tag-cap">MUNDIAL</span>
+  <div class="price-grid">
+    <div class="price-card">
+      <div class="price-num">$500 UYU</div>
+      <div class="price-label">INDIVIDUAL / MES</div>
+      <div style="font-size:0.65rem;color:#94a3b8;margin-top:4px;">≈ $10 USD</div>
+    </div>
+    <div class="price-card">
+      <div class="price-num">$5.000 UYU</div>
+      <div class="price-label">ORGANIZACIÓN 15 USUARIOS</div>
+      <div style="font-size:0.65rem;color:#94a3b8;margin-top:4px;">≈ $120 USD/mes</div>
+    </div>
+    <div class="price-card">
+      <div class="price-num">$6.500 UYU</div>
+      <div class="price-label">ORGANIZACIÓN 20 USUARIOS</div>
+      <div style="font-size:0.65rem;color:#94a3b8;margin-top:4px;">≈ $160 USD/mes</div>
+    </div>
+  </div>
+
+  <h3>🔮 ComuniPro® — Versión Básica</h3>
+  <span class="tag tag-pro">MUNDIAL</span>
+  <div class="price-grid">
+    <div class="price-card">
+      <div class="price-num">$350 UYU</div>
+      <div class="price-label">INDIVIDUAL / MES</div>
+      <div style="font-size:0.65rem;color:#94a3b8;margin-top:4px;">≈ $8 USD</div>
+    </div>
+    <div class="price-card">
+      <div class="price-num">$4.000 UYU</div>
+      <div class="price-label">ORGANIZACIÓN 15 USUARIOS</div>
+      <div style="font-size:0.65rem;color:#94a3b8;margin-top:4px;">≈ $100 USD/mes</div>
+    </div>
+  </div>
+
+  <h3>🚨 PictoCrisis® — Emergencias</h3>
+  <span class="tag tag-picto">URUGUAY</span>
+  <div class="price-grid">
+    <div class="price-card">
+      <div class="price-num">$500 UYU</div>
+      <div class="price-label">POR AGENTE / MES</div>
+    </div>
+    <div class="price-card">
+      <div class="price-num">$3.500 UYU</div>
+      <div class="price-label">UNIDAD/COMISARÍA 15 AGENTES</div>
+    </div>
+    <div class="price-card">
+      <div class="price-num">$4.500 UYU</div>
+      <div class="price-label">UNIDAD/COMISARÍA 20 AGENTES</div>
+    </div>
+  </div>
+
+  <h3>📊 Proyección de ingresos</h3>
+  <table>
+    <tr><th>Clientes</th><th>Producto</th><th>Ingreso mensual</th><th>Ingreso anual</th></tr>
+    <tr><td>10 organizaciones</td><td>ComuniCAP® 15u</td><td><strong>$1.200 USD</strong></td><td><strong>$14.400 USD</strong></td></tr>
+    <tr><td>5 comisarías</td><td>PictoCrisis® 15u</td><td><strong>$17.500 UYU</strong></td><td><strong>$210.000 UYU</strong></td></tr>
+    <tr><td>30 individuales</td><td>ComuniCAP®</td><td><strong>$300 USD</strong></td><td><strong>$3.600 USD</strong></td></tr>
+    <tr><td colspan="2"><strong>TOTAL ESTIMADO</strong></td><td><strong>~$2.000 USD/mes</strong></td><td><strong>~$24.000 USD</strong></td></tr>
+  </table>
+</div>
+
+<!-- ESTRATEGIA -->
+<div class="section" id="estrategia">
+  <h2>🎯 ESTRATEGIA DE VENTAS — POR DÓNDE EMPEZAR</h2>
+
+  <h3>Prioridad 1 — ComuniCAP® a clínicas y centros terapéuticos</h3>
+  <p style="font-size:0.85rem;color:var(--text2);line-height:1.7;margin-bottom:12px;">
+    Empezá por los centros donde ya trabajás o conocés profesionales. Un solo director convencido te da 15-20 usuarios pagos. 
+    El argumento clave: <em>"menos que una sesión de fonoaudiología por mes, para que el paciente se comunique todo el día, todos los días"</em>.
+  </p>
+
+  <h3>Prioridad 2 — PictoCrisis® al Ministerio del Interior</h3>
+  <p style="font-size:0.85rem;color:var(--text2);line-height:1.7;margin-bottom:12px;">
+    Una sola licitación o convenio con el Ministerio del Interior o la Policía Nacional puede darte cientos de agentes. 
+    Enviá la carta formal + presentación. Es un proceso más largo pero muy rentable.
+  </p>
+
+  <h3>Prioridad 3 — Colegios de educación especial</h3>
+  <p style="font-size:0.85rem;color:var(--text2);line-height:1.7;margin-bottom:12px;">
+    En Uruguay: CEIP, colegios privados con integración, centros CEIA. 
+    Internacional: colegios de España y Argentina con alumnos con TEA o necesidades comunicativas.
+  </p>
+
+  <h3>Prioridad 4 — Residencias de adultos mayores</h3>
+  <p style="font-size:0.85rem;color:var(--text2);line-height:1.7;margin-bottom:12px;">
+    ComuniCAP® es ideal para personas con ACV, Parkinson, demencia. Una residencia puede tener 20-50 residentes que necesitan la app.
+  </p>
+
+  <h3>Prioridad 5 — Familias directamente (Instagram + boca a boca)</h3>
+  <p style="font-size:0.85rem;color:var(--text2);line-height:1.7;">
+    Familias con hijos autistas, adultos con ACV, personas con parálisis cerebral. 
+    El precio individual de $500 UYU es accesible. La prueba gratuita de 15 días cierra la venta sola.
+  </p>
+</div>
+
+<!-- PRUEBA GRATUITA -->
+<div class="section" id="prueba">
+  <h2>🎁 SISTEMA DE PRUEBA GRATUITA — 15 DÍAS</h2>
+  <p style="font-size:0.85rem;color:var(--text2);line-height:1.7;margin-bottom:12px;">
+    <strong style="color:var(--text);">Recomendación:</strong> Ofrecé 15 días gratis a los padres/familiares de tus pacientes actuales. 
+    Cuando vean al familiar comunicándose mejor, la venta se cierra sola.
+  </p>
+  <div class="card green">Mensaje para enviar a familias de pacientes:
+
+Hola! Soy Adriana Soba, tu fonoaudióloga 🙂
+
+Quiero invitarte a probar ComuniCAP® de forma GRATUITA durante 15 días.
+Es la app que uso con [nombre del paciente] en las sesiones.
+
+Con ComuniCAP® podés:
+✅ Comunicarte con [nombre] en cualquier momento del día
+✅ Usar los mismos pictogramas que usamos en terapia  
+✅ Sin necesidad de WiFi una vez descargada
+
+No necesitás saber de tecnología — es muy sencilla.
+
+Tu código de acceso gratuito: [CÓDIGO]
+Ingresá en: https://comunipro2026-oss.github.io/comunica-aac
+
+Si tenés dudas, escribime! 
+Adriana Soba · Fonoaudióloga · Uruguay</div>
+</div>
+
+<!-- CARTAS -->
+<div class="section" id="cartas">
+  <h2>📄 CARTAS INSTITUCIONALES</h2>
+
+  <h3>📄 Carta 1 — Centros educativos / Colegios (ComuniCAP®)</h3>
+  <div class="card">Montevideo, [fecha]
+
+Estimado/a [nombre del director/a]:
+
+Me dirijo a usted en mi carácter de Fonoaudióloga (MP [número]) para presentarle ComuniCAP®, una herramienta digital de Comunicación Aumentativa y Alternativa (CAA) de desarrollo nacional, especialmente diseñada para instituciones educativas con alumnos con necesidades comunicativas especiales.
+
+ComuniCAP® permite a niños y jóvenes con Trastorno del Espectro Autista (TEA), parálisis cerebral, síndrome de Down u otras condiciones que afectan la comunicación, expresar sus necesidades, emociones y pensamientos mediante pictogramas adaptados.
+
+CARACTERÍSTICAS PRINCIPALES:
+• Funciona en cualquier dispositivo (celular, tablet, computadora)
+• Pictogramas en español adaptados al contexto escolar
+• Panel de gestión para directivos y docentes
+• Acceso para hasta 20 alumnos por institución
+• Soporte técnico personalizado
+
+INVERSIÓN: $5.000 UYU/mes (hasta 15 alumnos) · $6.500 UYU/mes (hasta 20 alumnos)
+Menos que el costo de una sola sesión terapéutica por alumno.
+
+PRUEBA GRATUITA: Ofrezco 15 días de acceso sin costo para que su equipo evalúe la herramienta.
+
+Quedo a disposición para una reunión o demostración sin compromiso.
+
+Lic. Adriana Soba
+Fonoaudióloga
+📱 [teléfono]
+📧 [email]
+🌐 https://comunipro2026-oss.github.io/comunica-aac</div>
+  <button class="copy-btn" onclick="copiar(this)">📋 Copiar carta</button>
+
+  <h3>📄 Carta 2 — Residencias de adultos mayores (ComuniCAP®)</h3>
+  <div class="card">Montevideo, [fecha]
+
+Estimado/a [nombre del director/a]:
+
+Me dirijo a usted para presentarle ComuniCAP®, una herramienta digital de Comunicación Aumentativa diseñada especialmente para personas adultas con dificultades en el habla o la comunicación, incluyendo residentes con secuelas de ACV, Parkinson, demencia u otras condiciones neurológicas.
+
+Muchos residentes de hogares de adultos mayores tienen la capacidad cognitiva intacta pero no pueden expresarse verbalmente. ComuniCAP® les devuelve la posibilidad de comunicar sus necesidades básicas, emociones y deseos de forma autónoma, mejorando notablemente su calidad de vida y reduciendo la carga del personal de cuidado.
+
+BENEFICIOS PARA SU INSTITUCIÓN:
+• Mejora la comunicación residente-cuidador en situaciones cotidianas y de emergencia
+• Reduce la frustración y los episodios de agitación
+• Fácil de usar sin conocimientos tecnológicos previos
+• Un solo dispositivo compartido puede ser suficiente para comenzar
+• Panel de administración para el equipo de salud
+
+INVERSIÓN: $5.000 UYU/mes para hasta 15 residentes.
+Esto equivale a menos de $340 UYU por residente — menos que cualquier insumo terapéutico mensual.
+
+Le ofrezco una demostración gratuita en sus instalaciones y 15 días de prueba sin costo.
+
+Lic. Adriana Soba
+Fonoaudióloga
+📱 [teléfono] · 📧 [email]</div>
+  <button class="copy-btn" onclick="copiar(this)">📋 Copiar carta</button>
+
+  <h3>📄 Carta 3 — Ministerio del Interior / Policía Nacional (PictoCrisis®)</h3>
+  <div class="card">Montevideo, [fecha]
+
+Sr./Sra. Director/a [nombre]
+Ministerio del Interior / Policía Nacional del Uruguay
+
+Estimado/a:
+
+Me dirijo a usted para presentar PictoCrisis®, una herramienta digital de comunicación de emergencia desarrollada en Uruguay, diseñada específicamente para el trabajo del personal policial, paramédico y de rescate en situaciones donde la comunicación verbal no es posible.
+
+PictoCrisis® permite a los agentes comunicarse eficazmente con personas en situación de crisis: víctimas de violencia, personas sordas, personas con dificultades del habla, personas extranjeras o en estado de shock. La herramienta opera sin necesidad de conexión a internet una vez instalada.
+
+FUNCIONALIDADES:
+• Pictogramas de emergencia organizados por categorías
+• Acceso inmediato en situaciones de alta tensión
+• Interfaz diseñada para uso con una mano
+• Panel de gestión por dependencia/comisaría
+• Trazabilidad de accesos
+
+INVERSIÓN:
+• $500 UYU/agente/mes
+• $3.500 UYU/mes por comisaría (hasta 15 agentes)
+• Convenio institucional a consultar para toda la fuerza
+
+Adjunto presentación institucional y guía de uso.
+Quedo a disposición para una demostración.
+
+Lic. Adriana Soba
+Fonoaudióloga — Desarrolladora de PictoCrisis®
+📱 [teléfono] · 📧 [email]
+🌐 https://comunipro2026-oss.github.io/pictoccrisis-policia</div>
+  <button class="copy-btn" onclick="copiar(this)">📋 Copiar carta</button>
+
+  <h3>📄 Carta 4 — SAMU / Emergencias médicas (PictoCrisis®)</h3>
+  <div class="card">Montevideo, [fecha]
+
+Estimado/a Director/a del SAMU:
+
+Me dirijo a usted para presentar PictoCrisis®, herramienta digital de comunicación de emergencia que permite al personal paramédico interactuar con pacientes que no pueden comunicarse verbalmente en situaciones de urgencia.
+
+En la atención prehospitalaria, los primeros minutos son críticos. PictoCrisis® facilita la evaluación rápida del paciente mediante pictogramas de dolor, síntomas y necesidades, reduciendo los errores de diagnóstico en personas con afasia, sordera, barrera idiomática o shock.
+
+Quedo a disposición para una demostración en sus instalaciones.
+
+Lic. Adriana Soba · Fonoaudióloga
+📱 [teléfono] · 📧 [email]</div>
+  <button class="copy-btn" onclick="copiar(this)">📋 Copiar carta</button>
+
+  <h3>📄 Carta 5 — Clínicas y centros terapéuticos (ComuniCAP®)</h3>
+  <div class="card">Montevideo, [fecha]
+
+Estimada/o [nombre]:
+
+Como colega del área de la salud, quiero compartirte ComuniCAP®, una herramienta de Comunicación Aumentativa y Alternativa que desarrollé para complementar el trabajo terapéutico de nuestros pacientes fuera del consultorio.
+
+La brecha entre lo que trabajamos en sesión y lo que el paciente puede aplicar en casa es uno de los mayores desafíos de nuestra profesión. ComuniCAP® permite que la familia continúe en casa el trabajo iniciado en terapia, usando los mismos pictogramas y estrategias comunicativas.
+
+PARA TU CLÍNICA/CENTRO:
+• Acceso para todo tu equipo terapéutico y hasta 20 pacientes
+• Personalizable con los pictogramas que uses en tus sesiones
+• $5.000 UYU/mes para hasta 15 usuarios
+• 15 días de prueba gratuita
+
+¿Te gustaría probarlo con algunos de tus pacientes este mes?
+
+Lic. Adriana Soba · Fonoaudióloga
+📱 [teléfono] · 📧 [email]</div>
+  <button class="copy-btn" onclick="copiar(this)">📋 Copiar carta</button>
+</div>
+
+<!-- INSTAGRAM -->
+<div class="section" id="instagram">
+  <h2>📱 PUBLICACIONES PARA INSTAGRAM</h2>
+  <p style="font-size:0.82rem;color:var(--text2);margin-bottom:16px;">
+    Estrategia: 3 publicaciones por semana. Alternar entre educativo, emocional y venta directa. Usar Reels cuando sea posible.
+  </p>
+
+  <h3>📸 Post 1 — Presentación ComuniCAP® (Carrusel o Reel)</h3>
+  <div class="insta-post">
+    <div class="insta-header">🟦 TIPO: CARRUSEL O REEL · OBJETIVO: AWARENESS</div>
+    <div class="insta-text">¿Sabías que hay personas que tienen MUCHO para decir pero no pueden hablar? 🗣️❌
+
+ComuniCAP® es la app que creé para que puedan hacerlo. 🧩
+
+👉 Con pictogramas simples, cualquier persona puede:
+✅ Pedir ayuda
+✅ Expresar cómo se siente  
+✅ Comunicar sus necesidades
+✅ Decir "te quiero"
+
+Para niños con autismo, adultos con ACV, personas sordas o con Parkinson.
+
+Si tenés un familiar que lo necesita, escribime. 💙
+
+🔗 Link en bio para probarla GRATIS 15 días.
+
+#ComuniCAP #ComunicacionAumentativa #TEA #Autismo #Fonoaudiología #CAA #Uruguay #AccesibilidadComunicativa #ACV #Parkinson #SíndromeDeDown</div>
+    <div style="margin-top:12px;font-size:0.72rem;color:var(--text2);">
+      📌 VISUAL SUGERIDO: Video mostrando la app en uso. O foto de manos usando la tablet con la app abierta.
+    </div>
+  </div>
+
+  <h3>📸 Post 2 — Reel emocional (el más viral)</h3>
+  <div class="insta-post">
+    <div class="insta-header">🎬 TIPO: REEL · OBJETIVO: VIRALIZACIÓN · MÚSICA: EMOTIVA</div>
+    <div class="insta-text">Imaginate no poder decirle a tu mamá que te duele la cabeza. 💔
+
+O que tenés frío.
+O que la querés.
+
+Esto es lo que viven miles de personas con dificultades en la comunicación.
+
+Por eso creé ComuniCAP®. 🧩
+Para que nadie se quede sin voz.
+
+Disponible en todo el mundo 🌍
+
+#SinVoz #ComunicaciónAumentativa #TEA #ComuniCAP #Fonoaudiología</div>
+    <div style="margin-top:12px;font-size:0.72rem;color:var(--text2);">
+      📌 VISUAL SUGERIDO: Texto apareciendo sobre fondo oscuro al ritmo de música emotiva. Muy fácil de hacer en CapCut.</div>
+  </div>
+
+  <h3>📸 Post 3 — PictoCrisis® para profesionales</h3>
+  <div class="insta-post">
+    <div class="insta-header">🟥 TIPO: IMAGEN · OBJETIVO: VENTAS A INSTITUCIONES</div>
+    <div class="insta-text">¿Qué pasa cuando un policía llega a una emergencia y la víctima no puede hablar? 🚨
+
+PictoCrisis® es la respuesta. 
+
+Una app que permite comunicarse con personas en crisis mediante pictogramas de emergencia. Sin wifi. Sin complicaciones.
+
+🛡️ Creada por una fonoaudióloga uruguaya.
+🚔 Ya disponible para comisarías y unidades de emergencia.
+
+¿Sos del área de seguridad o emergencias? Escribime.
+
+#PictoCrisis #Policía #SAMU #Emergencias #Uruguay #Fonoaudiología #Inclusión</div>
+  </div>
+
+  <h3>📸 Post 4 — Precio accesible (venta directa)</h3>
+  <div class="insta-post">
+    <div class="insta-header">🟩 TIPO: IMAGEN/CARRUSEL · OBJETIVO: CONVERSIÓN</div>
+    <div class="insta-text">¿Cuánto vale que tu familiar pueda comunicarse? 💙
+
+ComuniCAP® cuesta menos que UNA sesión de fonoaudiología al mes.
+
+$500 UYU/mes · $10 USD/mes
+
+Y con eso tenés:
+✅ Acceso ilimitado todos los días
+✅ Todos los pictogramas incluidos
+✅ Funciona sin internet
+✅ Soporte personalizado
+
+Primeros 15 días GRATIS. Sin tarjeta. Sin compromiso.
+
+Escribime o entrá al link en bio 👆
+
+#ComuniCAP #CAA #PrecioJusto #Fonoaudiología #Uruguay #TEA #Autismo</div>
+  </div>
+
+  <h3>📸 Post 5 — Para residencias de ancianos</h3>
+  <div class="insta-post">
+    <div class="insta-header">🟣 TIPO: CARRUSEL · OBJETIVO: B2B RESIDENCIAS</div>
+    <div class="insta-text">El abuelo de 80 años que tuvo un ACV todavía tiene mucho para decir. 👴💙
+
+Solo necesita la herramienta correcta.
+
+ComuniCAP® ayuda a adultos mayores con:
+🔹 Secuelas de ACV
+🔹 Parkinson
+🔹 Demencia leve-moderada
+🔹 Cualquier dificultad del habla
+
+¿Dirigís una residencia o centro de día?
+Te ofrezco 15 días gratis para probarlo con tus residentes.
+
+📩 Escribime por DM o al [email]
+
+#AdultosMayores #Gerontología #ACV #Parkinson #ComuniCAP #ComunicaciónAumentativa #Residencias</div>
+  </div>
+
+  <h3>📸 Post 7 — Emprendimiento femenino / No soy programadora (VIRAL)</h3>
+  <div class="insta-post">
+    <div class="insta-header">🎬 TIPO: REEL · OBJETIVO: VIRALIZACIÓN · MUY COMPARTIBLE</div>
+    <div class="insta-text">Me dijeron que para crear una app necesitaba ser programadora. 💻❌
+
+No les creí.
+
+Soy fonoaudióloga. 👩‍⚕️
+Trabajo todos los días con personas que no pueden hablar.
+
+Vi que mis pacientes necesitaban una herramienta que no existía.
+Y la creé. Autodidacta. Sin saber programar.
+
+Hoy tengo tres apps que llegan a familias en todo el mundo. 🌍
+
+¿La moraleja?
+Nadie conoce mejor un problema que quien lo vive todos los días.
+
+Si tenés una idea, no esperés a ser experta en todo.
+Empezá con lo que sabés.
+
+💙 ComuniCAP® — La hice yo. Para ellos.
+
+#Fonoaudióloga #NoProgramadora #EmprendimientoFemenino #Uruguay #ComuniCAP #Autodidacta #MujeresEmprendedoras #CAA</div>
+    <div style="margin-top:12px;font-size:0.72rem;color:var(--text2);">
+      📌 VISUAL: Texto apareciendo letra por letra sobre fondo oscuro. Muy fácil en CapCut. Este Reel puede volverse viral.
+    </div>
+  </div>
+
+  <h3>📸 Post 6 — Historia de éxito (testimonial)</h3>
+  <div class="insta-post">
+    <div class="insta-header">💬 TIPO: HISTORIA DE ÉXITO · OBJETIVO: CONFIANZA</div>
+    <div class="insta-text">No soy programadora. Soy fonoaudióloga. 👩‍⚕️
+
+Y eso es exactamente por qué esta app funciona.
+
+Después de años trabajando con pacientes que no podían hablar, me di cuenta de que necesitaban una herramienta para comunicarse fuera del consultorio.
+
+No existía en español. No existía pensada para nuestra realidad.
+
+Entonces la creé yo. De forma autodidacta. Aprendiendo lo que necesitaba aprender.
+
+Porque nadie mejor que una fonoaudióloga para diseñar una herramienta de comunicación. 💙
+
+🧩 ComuniCAP® — disponible en todo el mundo.
+Link en bio para probarla gratis.
+
+#Fonoaudióloga #ComuniCAP #Uruguay #NoProgramadora #CAA #ComunicaciónAumentativa #Autodidacta #EmprendimientoFemenino</div>
+  </div>
+</div>
+
+<!-- DESTINOS -->
+<div class="section" id="destinos">
+  <h2>📍 A QUIÉN ENVIAR — LISTA DE DESTINOS</h2>
+
+  <h3>🇺🇾 Uruguay — PictoCrisis® y ComuniCAP®</h3>
+  <div class="dest-list">
+    <div class="dest-item"><strong>Ministerio del Interior</strong> — Dirección Nacional de Policía<br>📧 comunicacion@minterior.gub.uy · 🌐 minterior.gub.uy</div>
+    <div class="dest-item"><strong>SAMU Uruguay</strong> — Sistema de Atención Médica de Urgencia<br>📍 Contacto vía ASSE: asse.com.uy · o directamente a la dirección del SAMU</div>
+    <div class="dest-item"><strong>CEIP</strong> — Consejo de Educación Inicial y Primaria<br>📧 contacto@ceip.edu.uy · Escuelas de educación especial</div>
+    <div class="dest-item"><strong>CES</strong> — Consejo de Educación Secundaria<br>📧 Liceos con programas de integración</div>
+    <div class="dest-item"><strong>INAU</strong> — Instituto del Niño y Adolescente del Uruguay<br>📧 inau@inau.gub.uy · Centros CAIF, hogares</div>
+    <div class="dest-item"><strong>Residencias de adultos mayores</strong><br>📍 ANDA, CASMU, Asociación de Jubilados, residencias privadas</div>
+    <div class="dest-item"><strong>Colegios privados con integración</strong><br>📍 Colegios del Opus, British Schools, colegios católicos con alumnos integrados</div>
+    <div class="dest-item"><strong>Clínicas y centros terapéuticos</strong><br>📍 Centro de Rehabilitación del BCU, CEREJO, centros privados de psicología y fonoaudiología</div>
+    <div class="dest-item"><strong>Bomberos Uruguay</strong><br>📧 Dirección Nacional de Bomberos: bomberos.gub.uy</div>
+  </div>
+
+  <h3>🌍 Internacional — ComuniCAP® y ComuniPro®</h3>
+  <div class="dest-list">
+    <div class="dest-item"><strong>🇦🇷 Argentina — Ministerio de Educación</strong><br>📧 consultas@educ.ar · Escuelas de educación especial (CABA y GBA)</div>
+    <div class="dest-item"><strong>🇦🇷 Argentina — FLENI, INECO, centros de neurorrehabilitación</strong><br>📧 info@fleni.org.ar · Pacientes con ACV y demencia</div>
+    <div class="dest-item"><strong>🇪🇸 España — Asociación Autismo España</strong><br>📧 autismo@autismo.org.es · 🌐 autismo.org.es</div>
+    <div class="dest-item"><strong>🇪🇸 España — CEAPAT (Centro de Referencia Estatal de Autonomía Personal)</strong><br>📧 ceapat@imserso.es · Son el referente en CAA en España</div>
+    <div class="dest-item"><strong>🇪🇸 España — Colegios de educación especial</strong><br>📍 Buscar en directorios de FEAPS y ASPACE</div>
+    <div class="dest-item"><strong>🇲🇽 México — DIF Nacional</strong><br>📧 atencion.ciudadana@dif.gob.mx · Programas de discapacidad</div>
+    <div class="dest-item"><strong>Instagram — Comunidades CAA en español</strong><br>📱 @comunicacion_aumentativa · @caa_hablar_sin_voz · @pictogramas_arasaac<br>💡 Comentar en sus posts con tu app. No spam — participar genuinamente.</div>
+  </div>
+</div>
+
+<script>
+function copiar(btn) {
+  const card = btn.previousElementSibling;
+  const text = card.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✅ Copiado!';
+    setTimeout(() => btn.textContent = '📋 Copiar carta', 2000);
+  });
+}
+</script>
+
+</body>
+</html>

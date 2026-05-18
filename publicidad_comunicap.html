@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ComuniCAP® — La voz que siempre estuvo ahí</title>
+<meta name="description" content="Herramienta digital de Comunicación Aumentativa y Alternativa para personas con dificultades en la comunicación verbal. Disponible en todo el mundo.">
+<style>
+:root {
+  --color: #3a86ff;
+  --bg: #f8faff;
+  --dark: #1a1a2e;
+  --text: #2d3748;
+  --text2: #718096;
+  --white: #ffffff;
+  --shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--dark) 0%, #16213e 100%);
+  color: white;
+  padding: 60px 20px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, #3a86ff33 0%, transparent 70%);
+}
+.hero-emoji { font-size: 5rem; display: block; margin-bottom: 16px; position: relative; }
+.hero-title { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 900; letter-spacing: -1px; position: relative; }
+.hero-title span { color: #3a86ff; }
+.hero-tagline { font-size: clamp(1rem, 3vw, 1.3rem); color: rgba(255,255,255,0.75); margin: 12px 0 32px; position: relative; }
+.hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; }
+.btn-primary {
+  background: #3a86ff;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform .2s, opacity .2s;
+  display: inline-block;
+}
+.btn-primary:hover { transform: translateY(-2px); opacity: .9; }
+.btn-outline {
+  background: transparent;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: all .2s;
+  display: inline-block;
+}
+.btn-outline:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+/* SECTIONS */
+.section { padding: 60px 20px; max-width: 900px; margin: 0 auto; }
+.section-title { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 900; text-align: center; margin-bottom: 12px; }
+.section-sub { text-align: center; color: var(--text2); font-size: 1rem; margin-bottom: 40px; }
+.divider { height: 1px; background: #e2e8f0; margin: 0 20px; }
+
+/* FEATURES */
+.features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+.feature-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border-top: 3px solid #3a86ff;
+}
+.feature-icon { font-size: 2rem; margin-bottom: 12px; }
+.feature-title { font-weight: 700; font-size: 1rem; margin-bottom: 6px; }
+.feature-text { color: var(--text2); font-size: 0.88rem; line-height: 1.6; }
+
+/* AUDIENCE */
+.audience-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+.audience-item {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.audience-emoji { font-size: 2.5rem; display: block; margin-bottom: 8px; }
+.audience-label { font-size: 0.85rem; font-weight: 700; }
+
+/* PLANES */
+.planes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.plan-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  border: 2px solid #e2e8f0;
+  text-align: center;
+}
+.plan-card.featured { border-color: #3a86ff; position: relative; }
+.plan-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3a86ff;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 4px 16px;
+  border-radius: 50px;
+}
+.plan-name { font-size: 1rem; font-weight: 700; color: var(--text2); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+.plan-price { font-size: 2.5rem; font-weight: 900; color: var(--dark); line-height: 1; }
+.plan-price span { font-size: 1rem; color: var(--text2); font-weight: 400; }
+.plan-features { list-style: none; margin: 20px 0; text-align: left; }
+.plan-features li { padding: 6px 0; font-size: 0.9rem; border-bottom: 1px solid #f0f4f8; }
+.plan-features li::before { content: '✅ '; }
+.plan-trial { font-size: 0.8rem; color: #3a86ff; font-weight: 700; margin-top: 12px; }
+
+/* CARTA */
+.carta-box {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  border-left: 4px solid #3a86ff;
+  font-family: 'Georgia', serif;
+}
+.copy-btn {
+  background: #3a86ff;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+/* CTA FINAL */
+.cta-section {
+  background: linear-gradient(135deg, var(--dark), #16213e);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+.cta-title { font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 12px; }
+.cta-sub { color: rgba(255,255,255,.75); font-size: 1rem; margin-bottom: 32px; }
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: rgba(255,255,255,.5);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.78rem;
+}
+
+@media(max-width:600px) {
+  .hero { padding: 40px 16px 60px; }
+  .section { padding: 40px 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="hero-emoji">🧩</span>
+  <h1 class="hero-title">ComuniCAP<span>®</span></h1>
+  <p class="hero-tagline">La voz que siempre estuvo ahí</p>
+  <div class="hero-btns">
+    <a href="https://comunipro2026-oss.github.io/comunica-aac" class="btn-primary">🚀 Probar gratis 15 días</a>
+    <a href="https://wa.me/59899926775?text=Hola+Adriana!+Vi+ComuniCAP®+y+quería+consultar" class="btn-outline">💬 Consultar por WhatsApp</a>
+  </div>
+</div>
+
+<!-- QUÉ ES -->
+<div class="section">
+  <h2 class="section-title">¿Qué es ComuniCAP®?</h2>
+  <p class="section-sub">Herramienta digital de Comunicación Aumentativa y Alternativa para personas con dificultades en la comunicación verbal. Disponible en todo el mundo.</p>
+  <div class="features-grid">
+    <div class="feature-card"><div class="feature-icon">🧩</div><div class="feature-title">Pictogramas adaptados</div><div class="feature-text">Cientos de pictogramas en español, organizados por categorías para comunicación cotidiana.</div></div><div class="feature-card"><div class="feature-icon">📱</div><div class="feature-title">Cualquier dispositivo</div><div class="feature-text">Funciona en celular, tablet o computadora. Sin instalación compleja.</div></div><div class="feature-card"><div class="feature-icon">🌐</div><div class="feature-title">Sin internet</div><div class="feature-text">Una vez configurada, funciona sin conexión. Ideal para emergencias.</div></div><div class="feature-card"><div class="feature-icon">🏫</div><div class="feature-title">Panel institucional</div><div class="feature-text">El director o terapeuta gestiona los accesos de todo su equipo desde un panel simple.</div></div><div class="feature-card"><div class="feature-icon">🔄</div><div class="feature-title">Actualización constante</div><div class="feature-text">Nuevos pictogramas y funciones se agregan regularmente.</div></div><div class="feature-card"><div class="feature-icon">💙</div><div class="feature-title">Hecha por fonoaudióloga</div><div class="feature-text">Creada por Adriana Soba, fonoaudióloga con experiencia clínica real.</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- PARA QUIÉN -->
+<div class="section">
+  <h2 class="section-title">¿Para quién es?</h2>
+  <p class="section-sub">Diseñada para quienes más lo necesitan</p>
+  <div class="audience-grid">
+    <div class="audience-item"><span class="audience-emoji">👦</span><div class="audience-label">Niños con autismo</div></div><div class="audience-item"><span class="audience-emoji">🧑‍🦯</span><div class="audience-label">Personas sordas</div></div><div class="audience-item"><span class="audience-emoji">👴</span><div class="audience-label">Adultos con ACV</div></div><div class="audience-item"><span class="audience-emoji">🧠</span><div class="audience-label">Parkinson / Demencia</div></div><div class="audience-item"><span class="audience-emoji">🏫</span><div class="audience-label">Colegios especiales</div></div><div class="audience-item"><span class="audience-emoji">🏥</span><div class="audience-label">Clínicas y centros</div></div><div class="audience-item"><span class="audience-emoji">👨‍👩‍👧</span><div class="audience-label">Familias</div></div><div class="audience-item"><span class="audience-emoji">🌍</span><div class="audience-label">Todo el mundo</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- PLANES -->
+<div class="section">
+  <h2 class="section-title">Planes y precios</h2>
+  <p class="section-sub">Precios actualizados en tiempo real</p>
+  <div class="planes-grid">
+    <div class="plan-card">
+      <div class="plan-name">👤 Individual</div>
+      <div class="plan-price"><span id="price-individual">—</span> <span>UYU/mes</span></div>
+      <ul class="plan-features">
+        <li>Acceso completo a la app</li>
+        <li>Todos los pictogramas incluidos</li>
+        <li>Funciona sin internet</li>
+        <li>Soporte personalizado</li>
+      </ul>
+      <div class="plan-trial">🎁 15 días gratis sin tarjeta</div>
+    </div>
+    <div class="plan-card featured">
+      <div class="plan-badge">MÁS POPULAR</div>
+      <div class="plan-name">🏢 Organización</div>
+      <div class="plan-price"><span id="price-clinica">—</span> <span>UYU/mes</span></div>
+      <ul class="plan-features">
+        <li>Hasta 15–20 usuarios</li>
+        <li>Panel de administración</li>
+        <li>Alta/baja de usuarios</li>
+        <li>Soporte prioritario</li>
+        <li>Precios a convenir para más usuarios</li>
+      </ul>
+      <div class="plan-trial">🎁 15 días gratis para tu equipo</div>
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- CARTA -->
+<div class="section">
+  <h2 class="section-title">Carta institucional</h2>
+  <p class="section-sub">Para enviar a colegios, clínicas y familias</p>
+  <div class="carta-box" id="carta-text">Montevideo, [fecha]
+
+Estimado/a [nombre]:
+
+Me dirijo a usted para presentar ComuniCAP®, una herramienta digital de Comunicación Aumentativa y Alternativa (CAA) desarrollada en Uruguay, especialmente diseñada para personas con dificultades en la comunicación verbal.
+
+ComuniCAP® permite a niños con autismo, adultos con ACV, personas con Parkinson u otras condiciones comunicarse mediante pictogramas adaptados, desde cualquier dispositivo y sin necesidad de internet.
+
+PARA SU INSTITUCIÓN:
+• Acceso para hasta 20 usuarios desde un panel de administración
+• Gestión de altas y bajas de usuarios
+• 15 días de prueba gratuita sin compromiso
+
+Le ofrezco una demostración sin costo para que su equipo evalúe la herramienta.
+
+Lic. Adriana Soba · Fonoaudióloga
+📱 +598 99 926 775 · 🌐 https://comunipro2026-oss.github.io/comunica-aac</div>
+  <button class="copy-btn" onclick="copiarCarta()">📋 Copiar carta</button>
+</div>
+
+
+<!-- HISTORIA DE ORIGEN -->
+<div style="background:linear-gradient(135deg,#1a1a2e,#16213e);color:white;padding:60px 20px;text-align:center;">
+  <div style="max-width:700px;margin:0 auto;">
+    <div style="font-size:3rem;margin-bottom:16px;">👩‍⚕️</div>
+    <h2 style="font-size:clamp(1.5rem,4vw,2.2rem);font-weight:900;margin-bottom:16px;">No soy programadora.<br>Soy fonoaudióloga.</h2>
+    <p style="font-size:1rem;color:rgba(255,255,255,.8);line-height:1.8;margin-bottom:24px;">
+      Soy <strong style="color:#06d6a0;">Adriana Soba</strong>, fonoaudióloga uruguaya con años de experiencia clínica.<br><br>
+      Un día me di cuenta de que mis pacientes necesitaban comunicarse más allá del consultorio — y no existía una herramienta en español que realmente entendiera cómo trabaja la comunicación humana.<br><br>
+      Entonces aprendí a crearla. <strong style="color:#06d6a0;">Sin ser programadora. De forma autodidacta.</strong> Porque nadie mejor que una fonoaudióloga para diseñar una herramienta de comunicación.
+    </p>
+    <p style="font-size:0.9rem;color:rgba(255,255,255,.6);font-style:italic;">
+      "Estas apps no las creó una empresa de software.<br>Las creó alguien que trabaja con personas todos los días."
+    </p>
+  </div>
+</div>
+<div class="divider"></div>
+<!-- CTA FINAL -->
+<div class="cta-section">
+  <h2 class="cta-title">¿Querés probarlo gratis?</h2>
+  <p class="cta-sub">15 días de acceso completo, sin tarjeta de crédito, sin compromiso.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+    <a href="https://comunipro2026-oss.github.io/comunica-aac" class="btn-primary">🚀 Empezar gratis</a>
+    <a href="https://wa.me/59899926775?text=Hola+Adriana!+Quiero+probar+ComuniCAP®" class="btn-outline">💬 Hablar con Adriana</a>
+  </div>
+</div>
+
+<footer>
+  © 2025 Adriana Soba · Fonoaudióloga · Uruguay · Todos los derechos reservados<br>
+  ComuniCAP® es una herramienta digital de comunicación desarrollada en Uruguay.
+</footer>
+
+<script>
+// ── Precios dinámicos desde Supabase ──
+(async function() {
+  try {
+    const res = await fetch(
+      "https://lgpqyjevdwstbnerawmp.supabase.co/rest/v1/config?select=precio_individual,precio_clinica&limit=1",
+      { headers: { "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxncHF5amV2ZHdzdGJuZXJhd21wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMzM1OTgsImV4cCI6MjA5MjgwOTU5OH0.GMPbwHdxj_aRLaJgDHCkDA5L1KHAwLJLkO9LYOpI8pA", "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxncHF5amV2ZHdzdGJuZXJhd21wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyMzM1OTgsImV4cCI6MjA5MjgwOTU5OH0.GMPbwHdxj_aRLaJgDHCkDA5L1KHAwLJLkO9LYOpI8pA" } }
+    );
+    const data = await res.json();
+    if (data && data.length) {
+      const p = data[0];
+      if (p.precio_individual) document.getElementById('price-individual').textContent = '$' + parseInt(p.precio_individual).toLocaleString('es-UY');
+      if (p.precio_clinica) document.getElementById('price-clinica').textContent = '$' + parseInt(p.precio_clinica).toLocaleString('es-UY');
+    }
+  } catch(e) { console.log('Price load error:', e); }
+})();
+
+function copiarCarta() {
+  const text = document.getElementById('carta-text').innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = '✅ Copiada!';
+    setTimeout(() => btn.textContent = '📋 Copiar carta', 2000);
+  });
+}
+</script>
+</body>
+</html>
